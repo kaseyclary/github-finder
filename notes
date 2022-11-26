@@ -1,0 +1,62 @@
+Styling:
+    Styling for this project relied on two main libraries
+        - Daisy UI
+        - Tailwind CSS
+    Go to tailwind create react app documentation to quickly set up the tailwind environment
+    For Daisy UI, go to tailwind.config file and use "plugins: [require('daisyui')]"
+
+    Implementation:
+        Themes:
+            For themes, go to the public HTML file. On the HTML tag, use data-theme="" and input the theme you want to use.
+                There are multiple to choose from in the docs
+        
+        Component Styling:
+            This is really easy. Just include the classnames for everything in the component classname.
+                Example: mx-2 is margin 2. text-lg, font-bold, flex-none, etc.
+
+        Screen breaks:
+            Screen breaks are simple using tailwind. Just specify in the classname
+            Example:
+                className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2"
+            Can use:
+                Extra large: xl
+                Large: lg
+                Medium: md
+                Small: sm
+
+
+Reducers:
+    Reducers are functions that are used to manipulate state.
+    State-heavy applications should always use reducers to scale.
+    Redux uses reducers.
+    Redux isn't usually necessary unless it's a massive application.
+    In most cases, you should just stick to react and reducers.
+
+    What is a reducer?
+        A reducer is a function that takes two arguments 
+        -- the current state and an action -- 
+        and returns based on both arguments a new state.
+
+    Examples:
+        Look at the following files:
+            src -> context -> github -> GithubReducer.js
+            src -> context -> github -> GithubContext.js
+            src -> users -> UserResults.jsx
+    *NOTE:
+        Always make sure to wrap your app jsx in the context provider when using context
+
+
+Events changing state:
+    Useful for things like taking text value from an input
+    and storing it in a state variable
+
+    functions: setText, handleChange, handleSubmit
+
+    Example:
+        src -> components -> users -> userSearch
+
+Parameters in GET request
+    Used for passing dynamic content into GET requests from APIs
+    
+    Example:
+        src -> context -> github -> GithubContext.js -> const params, const response
